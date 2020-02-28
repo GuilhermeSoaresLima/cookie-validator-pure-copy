@@ -1,0 +1,35 @@
+.main-container {
+  width: auto;
+  height: 100px;
+  display: flex;
+  /* padding: 60px; */
+  overflow-y: scroll;
+  background: rgba(230, 233, 236, 0.85);
+  font-size: 12px;
+
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.message-container {
+}
+
+.container-button {
+  border: 1px solid purple;
+}
+
+.container-button button {
+  border-radius: 25px;
+  width: 50px;
+  height: 50px;
+}
+
+/* responsive chnages */
+
+@media (min-width: 1061px) {
+  .main-container {
+    width: 1024px;
+  }
+}
