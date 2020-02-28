@@ -67,16 +67,6 @@ function closeMessage(isOpen) {
   console.log(isOpen);
   if (isOpen) {
     createNewCookie();
-    // document.location.reload(true);
-    // document.getElementById("isView").style.visibility = "hidden";
-  }
-}
-
-function showAlert(isView) {
-  if (isView === false) {
-    // document.getElementById("isView").style.visibility = "hidden";
-
-    console.log(document.getElementById("main-container"));
   }
 }
 
@@ -84,19 +74,12 @@ function genericFunction() {
   closeMessage(state.showCookie);
 }
 
+// Beginning of the running
+
 state.showCookie = compareDate();
-// const isView =
-//   state.showCookie === false
-//     ? (document.getElementById("isView").style.visibility = "hidden")
-//     : "";
-
-console.log("Estado", state);
-
-// showAlert(state.showCookie);
 
 window.addEventListener("load", function() {
   if (state.showCookie === false) {
-    // document.getElementById("isView").style.visibility = "hidden";
     document.getElementById("isView").style.display = "none";
   }
 });
