@@ -1,35 +1,97 @@
 .main-container {
   width: auto;
-  height: 100px;
+  height: auto;
   display: flex;
-  /* padding: 60px; */
   overflow-y: scroll;
-  background: rgba(230, 233, 236, 0.85);
-  font-size: 12px;
-
+  background: rgba(59, 59, 59);
+  color: rgb(255, 255, 255);
+  font-family: Open Sans;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 24px;
   margin-right: auto;
   margin-left: auto;
   padding-left: 15px;
-  padding-right: 15px;
+  border-radius: 14px 14px 0px 0px;
+  /* padding: 5px; */
+  padding: 10px;
 }
 
 .message-container {
+  display: flex;
+  width: 100%;
+  padding: 24px;
+}
+
+.message-container p {
+  text-align: justify;
+  margin: 0;
+  width: 100%;
 }
 
 .container-button {
-  border: 1px solid purple;
+  position: relative;
+  padding: 0;
 }
 
 .container-button button {
+  background-color: transparent;
+  border-color: transparent;
+  color: #fafafa;
+}
+
+.btn-message {
   border-radius: 25px;
-  width: 50px;
-  height: 50px;
+  font-weight: 600;
+  background-color: transparent;
+  border-color: transparent;
+  color: #fafafa;
+  text-align: end;
+  width: 205px;
+  font-size: 17px;
+}
+
+.btn-close {
+  font-family: "Raleway";
+  font-size: 17px;
+  float: right;
 }
 
 /* responsive chnages */
 
 @media (min-width: 1061px) {
   .main-container {
-    width: 1024px;
+    width: 1290px;
+  }
+
+  .message-container {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 414px) {
+  .main-container {
+  }
+
+  .message-container {
+    display: inline-block;
+    padding: 20px;
+  }
+
+  .message-container p {
+    margin: 0px 0px 15px 0px;
+  }
+
+  .container-button {
+    padding: 24px 12px 0px 24px;
+  }
+
+  .btn-message {
+    text-align: center;
+    width: 125%;
+  }
+
+  .btn-close {
+    font-size: 23px;
   }
 }

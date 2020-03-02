@@ -25,11 +25,8 @@ function createNewCookie() {
   );
   document.cookie = `expirationDate=${expirationDate}; expires=${expirationDate};`;
 
-  //   state = {
-  //     showCookie: false
-  //   };
-
   state.showCookie = false;
+
   document.location.reload(true);
 }
 
@@ -37,9 +34,6 @@ function checkCookies() {
   const lastCookie = document.cookie
     .split(";")
     .filter(row => row.includes("expirationDate"));
-
-  console.log("lastCookie", lastCookie);
-  console.log(getLastCookie(lastCookie));
 
   return getLastCookie(lastCookie);
 }
@@ -49,17 +43,14 @@ function compareDate() {
   const lastCookie = checkCookies();
   const lastCookieToTimestamp = new Date(`${lastCookie.hour}`);
   const currentTime = new Date();
-  console.log("Timestamp", lastCookieToTimestamp.getTime());
 
   if (
     currentTime.getTime() >= lastCookieToTimestamp.getTime() + dayToTimesTamp ||
     lastCookie.name === ""
   ) {
-    console.log("cookie expirou");
     return true;
   }
 
-  console.log("cookie nao expirou");
   return false;
 }
 
